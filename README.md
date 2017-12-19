@@ -10,4 +10,5 @@ Here are some popular variants of GANs, implemented in PyTorch. Moreover, I try 
 * [cGAN](cGAN) - Conditional GAN.
     * [Conditional GAN without BN layers in generator](cGAN/model1.py)
     * [Conditional GAN with BN layers in generator](cGAN/model2.py)
-    
+* [DCGAN](DCGAN) - Conditional GAN.
+    * [Deep Convolutional GAN](DCGAN/model.py)
