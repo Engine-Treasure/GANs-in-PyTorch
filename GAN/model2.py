@@ -42,15 +42,15 @@ class Discriminator(nn.Module):
     def __init__(self):
         super(Discriminator, self).__init__()
         self.L1 = nn.Sequential(
-            nn.Dropout(keep_prob_h0),
+            nn.Dropout(1 - keep_prob_h0),
             Maxout(784, 240, 5),
         )
         self.L2 = nn.Sequential(
-            nn.Dropout(keep_prob_default),
+            nn.Dropout(1 - keep_prob_default),
             Maxout(240, 240, 5),
         )
         self.L3 = nn.Sequential(
-            nn.Dropout(keep_prob_default),
+            nn.Dropout(1 - keep_prob_default),
             nn.Linear(240, 1),
             nn.Sigmoid()
         )
